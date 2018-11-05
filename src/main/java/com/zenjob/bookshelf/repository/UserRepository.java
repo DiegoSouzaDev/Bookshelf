@@ -1,6 +1,5 @@
 package com.zenjob.bookshelf.repository;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,25 +9,24 @@ import com.zenjob.bookshelf.model.User;
 
 @Repository
 public class UserRepository {
-	
+
 	private final Map<String, User> userMap;
-	
+
 	public UserRepository() {
 		userMap = new HashMap<String, User>();
 	}
-
-	public Collection<User> getAll() {
-		return userMap.values();
-	}
-
+	
 	public User getUserByUsername(final String userName) {
 		return userMap.get(userName);
 	}
-	
-	public User save(String userName) {
-		final User user = new User(userMap.size() + 1, userName);
+
+	public User save(User user) {
 		userMap.put(user.getUserName(), user);
 		return user;
 	}
-
+	
+	public boolean userAlreadyExists(String userName) {
+		return userMap.containsKey(userName);
+	}
+	
 }

@@ -1,12 +1,15 @@
 package com.zenjob.bookshelf.model;
 
+import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class Recommendation {
-	private User user;
-	private Book book;
-	private boolean hasFeedback;
+	private String userName;
+	private List<String> bookAsinList;
 }

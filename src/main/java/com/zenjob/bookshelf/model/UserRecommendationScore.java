@@ -9,6 +9,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserRecommendationScore {
-	private final Map<String, Integer> genderMap = new HashMap<String, Integer>();
+	private String username;
 	private final Map<String, Integer> authorMap = new HashMap<String, Integer>();
+	/* genero -> nota */
+	private final Map<String, Integer> genderMap = new HashMap<String, Integer>();
 }

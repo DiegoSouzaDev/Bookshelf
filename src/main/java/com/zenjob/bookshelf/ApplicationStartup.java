@@ -1,4 +1,4 @@
-package com.zenjob.bookshelf.bootstrap;
+package com.zenjob.bookshelf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
